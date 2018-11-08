@@ -1,15 +1,17 @@
-@tab-radius: 3px;
+@import "syntax-variables";
+
+@tab-radius: 5px;
 @modified-icon-width: 8px;
 @tab-skew: 30deg;
 @tab-top-padding: 5px;
-@tab-bottom-border-height: 5px;
+@tab-bottom-border-height: 0px;
 @tab-border: 1px solid @tab-border-color;
 @tab-bar-bottom-border-color: @tab-border-color;
 @tab-max-width: 160px;
 
 .tab-bar {
-  height: @tab-height + @tab-top-padding + @tab-bottom-border-height;
-  background-image: -webkit-linear-gradient(top, @tab-bar-background-color, lighten(@tab-bar-background-color, 9%));
+  height: @ambiance-tab-bar-height;
+  background-image: @ambiance-tab-bar-gradient;
   box-shadow: inset 0 -8px 8px -4px rgba(0,0,0, .15);
   padding: 0 10px 0 25px;
   overflow-x: auto;
@@ -30,6 +32,7 @@
     margin: 0 20px 0 5px;
 
     box-shadow: inset -1px -1px 1px rgba(0,0,0, .05);
+    border-bottom: 1px solid @tab-bar-border-color;
     transition: color .1s ease-in;
 
     &, &:before, &:after {
@@ -50,6 +53,7 @@
       left: -14px;
       border-top-left-radius: @tab-radius;
       border-left: @tab-border;
+      border-bottom: 1px solid @tab-bar-border-color;
       box-shadow: inset 1px -1px 1px rgba(0,0,0, .05);
       -webkit-transform: skewX(-@tab-skew);
     }
@@ -59,6 +63,7 @@
       right: -14px;
       border-top-right-radius: @tab-radius;
       border-right: @tab-border;
+      border-bottom: 1px solid @tab-bar-border-color;
       box-shadow: inset -1px -1px 1px rgba(0,0,0, .05);
       -webkit-transform: skewX(@tab-skew);
     }
@@ -98,6 +103,7 @@
   .tab.active {
     z-index: 1;
     color: @text-color-highlight;
+    border-bottom: none;
 
     .close-icon {
       line-height: @tab-height - 1px;
@@ -105,14 +111,12 @@
     }
 
     &, &:before, &:after {
-      background: @tab-background-color-active;
-      height: @tab-height + 1px;
+      color: @syntax-text-color;
+      background: @syntax-background-color;
+      height: @tab-height;
       box-shadow: none;
+      border-bottom: none;
     }
-  }
-
-  .tab:hover {
-    color: @text-color-highlight;
   }
 
   .tab.active:hover .close-icon {
@@ -140,7 +144,7 @@
 .tab-bar + .item-views::before {
   content: "";
   position: absolute;
-  top: -5px;
+  //top: -5px;
   height: @tab-bottom-border-height;
   left: 0;
   right: 0;

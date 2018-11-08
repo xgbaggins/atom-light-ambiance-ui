@@ -34,16 +34,19 @@
   @border: fadeout(darken(@color, 20%), 50%);
   .btn-background(@bg, @hover, @selected, @border, @text-color-selected, @text-color-selected);
 }
+.btn-variant-lighter (@color) {
+  .btn-variant(lighten(@color, 10%))
+}
 
 .btn {
   .btn-background(@button-background-color, @button-background-color-hover, @button-background-color-selected, @button-border-color, @text-color, @text-color-highlight);
 }
 
 .btn.btn-primary {
-  .btn-variant(@background-color-info);
+  .btn-variant-lighter(@background-color-info);
 }
 .btn.btn-info {
-  .btn-variant(@background-color-info);
+  .btn-variant-lighter(@background-color-info);
 }
 .btn.btn-success {
   .btn-variant(@background-color-success);

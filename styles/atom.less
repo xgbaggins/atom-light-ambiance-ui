@@ -2,6 +2,14 @@ atom-workspace {
   background-color: @app-background-color;
 }
 
+.atom-dock-resize-handle {
+  background-image: @ambiance-vertical-resizer-gradient;
+  width: 2px;
+}
+.atom-dock-resize-handle.left, .atom-dock-resize-handle.right {
+  width: 2px;
+}
+
 .scrollbars-visible-always {
   ::-webkit-scrollbar {
     width: 10px;
@@ -13,9 +21,30 @@ atom-workspace {
     background: @scrollbar-background-color;
   }
 
-  ::-webkit-scrollbar-thumb {
-    background: @scrollbar-color;
-    border-radius: 5px;
+  ::-webkit-scrollbar-thumb not(.scrollbar-corner) {
+    width: 5px;
+    border-radius: 0px;
 		box-shadow: 0 0 1px white inset;
+  }
+  ::-webkit-scrollbar-thumb .scrollbar-corner {
+    width: 0px;
+  }
+  ::-webkit-scrollbar-thumb:vertical {
+    background-image: -webkit-linear-gradient(left, @scrollbar-background-color 50%, @scrollbar-color 50%);
+  }
+  ::-webkit-scrollbar-thumb:horizontal {
+    background-image: -webkit-linear-gradient(top, @scrollbar-background-color 50%, @scrollbar-color 50%);
+  }
+  ::-webkit-scrollbar-thumb:vertical:hover {
+    background: @scrollbar-color;
+  }
+  ::-webkit-scrollbar-thumb:horizontal:hover {
+    background: @scrollbar-color;
+  }
+  ::-webkit-scrollbar-thumb:vertical:window-inactive {
+    background-image: -webkit-linear-gradient(left, @scrollbar-background-color 50%, @scrollbar-color-inactive 50%);
+  }
+  ::-webkit-scrollbar-thumb:horizontal:window-inactive {
+    background-image: -webkit-linear-gradient(top, @scrollbar-background-color 50%, @scrollbar-color-inactive 50%);
   }
 }

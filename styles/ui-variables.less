@@ -1,11 +1,19 @@
 // Colors
 
+@ambiance-highlight: #f07746;
+@ambiance-highlight-text: #f07746;
+@ambiance-window-background: #3c3b37;
+@ambiance-tab-bar-height: @tab-height + 5px;
+@ambiance-tab-bar-gradient: -webkit-linear-gradient(top, #3c3b37, #54524b);
+@ambiance-vertical-resizer-gradient: -webkit-linear-gradient(top, #3c3b37, #54524b @ambiance-tab-bar-height, #cecbc8 @ambiance-tab-bar-height);
+@ambiance-scrollbar-color: #f08f68;
+
 @text-color: #444;
 @text-color-subtle: #999;
 @text-color-highlight: #000;
 @text-color-selected: #fff;
 
-@text-color-info: #5293d8;
+@text-color-info: @ambiance-highlight-text;
 @text-color-success: #45A815;
 @text-color-warning: #CD8E00;
 @text-color-error: #c00;
@@ -16,17 +24,17 @@
 @text-color-modified: @text-color-warning;
 @text-color-removed: @text-color-error;
 
-@background-color-info: #0098ff;
+@background-color-info: @ambiance-highlight;
 @background-color-success: #17ca65;
 @background-color-warning: #ff4800;
 @background-color-error: #c00;
 @background-color-highlight: rgba(0, 0, 0, .1);
-@background-color-selected: #6aa5e9;
+@background-color-selected: @ambiance-highlight;
 
 @app-background-color: #ccc;
 
 @base-background-color: #f4f4f4;
-@base-border-color: #9f9f9f;
+@base-border-color: #c9c6c3;
 
 @pane-item-background-color: @base-background-color;
 @pane-item-border-color: @base-border-color;
@@ -51,17 +59,18 @@
 @button-background-color-selected: #888;
 @button-border-color: rgba(0, 0, 0, 0.15);
 
-@tab-bar-background-color: #d8d8d8;
-@tab-bar-border-color: #ddd;
-@tab-background-color: #e8e8e8;
-@tab-background-color-active: #f0f0f0;
-@tab-border-color: lighten(@base-border-color, 10%);
+@tab-bar-background-color: @ambiance-window-background;
+@tab-bar-border-color: #a4a4a4;
+@tab-background-color: #ddd;
+@tab-background-color-active: #ffffff;
+@tab-border-color: darken(@base-border-color, 25%);
 
-@tree-view-background-color: #eee;
+@tree-view-background-color: #f2f1f0;
 @tree-view-border-color: @base-border-color;
 
-@scrollbar-background-color: #F9F9F9; // Needs to be opaque -> atom/atom/issues/4578
-@scrollbar-color: #C1C1C1;
+@scrollbar-background-color: #f2f1f0; // Needs to be opaque -> atom/atom/issues/4578
+@scrollbar-color: @ambiance-scrollbar-color;
+@scrollbar-color-inactive: #bdbdbd;
 
 @ui-site-color-1: @background-color-success; // green
 @ui-site-color-2: @background-color-info; // blue
@@ -72,7 +81,7 @@
 
 // Sizes
 
-@font-size: 11px;
+@font-size: 12px;
 @input-font-size: 14px;
 @disclosure-arrow-size: 12px;
 
@@ -80,9 +89,9 @@
 @component-icon-padding: 5px;
 @component-icon-size: 16px;
 @component-line-height: 25px;
-@component-border-radius: 2px;
+@component-border-radius: 0px;
 
-@tab-height: 26px;
+@tab-height: 28px;
 
 
 // Other

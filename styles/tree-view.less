@@ -1,9 +1,10 @@
 .tree-view {
 	font-size: @font-size;
 	background: @tree-view-background-color;
+	padding-top: 10px;
 
 	.selected:before {
-		background: #d0d0d0;
+		background: @background-color-selected;
 	}
 }
 
@@ -15,8 +16,6 @@
 
 .focusable-panel {
 	opacity: 1;
-	background-image: -webkit-gradient(linear, left top, left bottom, from(#e8ecf1), to(#ebebeb));
-	background-image: -webkit-linear-gradient(top, #e8ecf1, #ebebeb);
 
 	&:focus {
 		background-image: -webkit-gradient(linear, left top, left bottom, from(#e8ecf1),to(#d1d8e0));

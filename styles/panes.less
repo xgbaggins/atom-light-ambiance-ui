@@ -8,7 +8,18 @@ atom-pane-container {
   }
 
   atom-pane-axis.horizontal > * {
-    border-right: 1px solid @pane-item-border-color;
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      height: 100%;
+      left: 0;
+      right: 0;
+      width: 1px;
+      border: 0px;
+      background-image: @ambiance-vertical-resizer-gradient;
+    }
+
     &:last-child { border-right: none; }
   }
 
