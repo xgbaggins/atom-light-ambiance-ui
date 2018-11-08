@@ -1,9 +1,11 @@
-# Atom Light UI theme
+# Atom Light Ambiance UI Theme
 
-A light UI theme for Atom.
+Atom Light theme tweaked to fit with Ubuntu's Ambiance GTK theme,
+featuring dark tab bar and orange highlights.
 
-This theme is installed by default with Atom and can be activated by going to
-the _Themes_ section in the Settings view (`cmd-,`) and selecting it from the
-_UI Themes_ drop-down menu.
+## Screenshots
 
-![](https://f.cloud.github.com/assets/671378/2265022/bb148a20-9e7a-11e3-81c8-bf5965d48183.png)
+![](https://raw.githubusercontent.com/xgbaggins/atom-light-ambiance-ui/master/screenshot1.png)
+
+![](https://raw.githubusercontent.com/xgbaggins/atom-light-ambiance-ui/master/screenshot2.png)
+
