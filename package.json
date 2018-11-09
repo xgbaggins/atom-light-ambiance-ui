@@ -1,7 +1,7 @@
 {
   "name": "atom-light-ambiance-ui",
   "theme": "ui",
-  "version": "1.2.0",
+  "version": "1.2.2",
   "description": "Atom Light theme tweaked to fit with Ubuntu's Ambiance GTK theme.",
   "repository": "https://github.com/xgbaggins/atom-light-ambiance-ui.git",
   "license": "MIT",
